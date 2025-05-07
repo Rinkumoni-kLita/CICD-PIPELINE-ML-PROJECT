@@ -2,7 +2,7 @@ import streamlit as  st
 import pickle
 import pandas as pd
 import requests
-import os
+
 
 
 #function for fetching poster from json viewer
@@ -43,13 +43,13 @@ def recommend(movie):
 
 #under movies_list the movies.pkl and movie_dict.pkl are added
 # Absolute path of your Jenkins workspace directory
-base_path = '/var/lib/jenkins/workspace/CICD PIPELINE ML PROJECT' 
 
-movies_dict = pickle.load(open(os.path.join(base_path, 'movie_dict.pkl'),'rb'))
+
+movies_dict = pickle.load(open('movie_dict.pkl'),'rb'))
 movies = pd.DataFrame(movies_dict) #this is the dataframe
 
 #similartiy
-similarity = pickle.load(open(os.path.join(base_path, 'similarity.pkl'),'rb'))
+similarity = pickle.load(open('similarity.pkl'),'rb'))
 
 st.title('Movie Recommender System')
 
