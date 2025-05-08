@@ -45,7 +45,7 @@ def recommend(movie):
 # Absolute path of your Jenkins workspace directory
 
 
-movies_dict = pickle.load(open('movie_dict.pkl'),'rb'))
+movies_dict = pickle.load(open('movie_dict.pkl','rb'))
 movies = pd.DataFrame(movies_dict) #this is the dataframe
 
 #similartiy
