@@ -3,8 +3,6 @@ import pickle
 import pandas as pd
 import requests
 
-
-
 #function for fetching poster from json viewer
 
 def fetch_poster(movie_id):
@@ -42,14 +40,12 @@ def recommend(movie):
 
 
 #under movies_list the movies.pkl and movie_dict.pkl are added
-# Absolute path of your Jenkins workspace directory
 
-
-movies_dict = pickle.load(open('movie_dict.pkl'),'rb'))
+movies_dict = pickle.load(open('movie_dict.pkl','rb'))
 movies = pd.DataFrame(movies_dict) #this is the dataframe
 
 #similartiy
-similarity = pickle.load(open('similarity.pkl'),'rb'))
+similarity = pickle.load(open('similarity.pkl','rb'))
 
 st.title('Movie Recommender System')
 
