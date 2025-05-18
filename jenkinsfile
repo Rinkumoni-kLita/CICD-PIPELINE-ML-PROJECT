@@ -17,11 +17,15 @@ pipeline {
                 echo 'Initializing Pipeline...'
                 sh '''
                 cd ${APP_PATH}
+                # Pull the latest code from GitHub
+                git reset --hard
+                git pull origin main
+
                 if [ ! -d "venv" ]; then
                     python3 -m venv venv
                 fi
                 source ${VENV_PATH}
-                pip install streamlit pandas numpy nltk requests
+                pip install -r requirements.txt
                 '''
             }
         }
