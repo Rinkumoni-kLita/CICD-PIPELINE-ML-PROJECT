@@ -51,7 +51,7 @@ movies = pd.DataFrame(movies_dict) #this is the dataframe
 #similartiy
 similarity = pickle.load(open('similarity.pkl','rb'))
 
-st.title('Rinkumoni kalita')
+st.title('Rinku')
 
 #select box
 #from streamlit API reference
