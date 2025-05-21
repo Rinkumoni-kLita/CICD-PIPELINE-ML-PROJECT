@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        APP_PATH = '/var/lib/jenkins/workspace/CICD PIPELINE ML PROJECT'
+        APP_PATH = '/var/lib/jenkins/workspace/MLOps'
         VENV_PATH = 'venv/bin/activate'
         STREAMLIT_PORT = '8501'
     }
